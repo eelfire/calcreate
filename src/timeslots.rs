@@ -11,7 +11,7 @@
 
 use std::collections::HashMap;
 
-pub fn maap() -> HashMap<String, (u8, String)> {
+pub fn gen_slots() -> HashMap<String, (usize, String)> {
     let mut map = HashMap::new();
 
     map.insert("A1".to_string(), (0, "MO".to_string()));

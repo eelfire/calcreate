@@ -43,10 +43,8 @@ pub struct Course {
     pub hss_bs_elective: Option<String>,
 }
 
-pub fn run() -> Result<Vec<Course>, Box<dyn Error>> {
-    // let file = File::open("csv-ics/timetable.csv")?;
-    // let file = File::open("csv-ics/5th-sem.csv")?;
-    let file = File::open("csv-ics/jivi.csv")?;
+pub fn run(input_file: String) -> Result<Vec<Course>, Box<dyn Error>> {
+    let file = File::open(input_file)?;
     // let mut rdr = csv::Reader::from_reader(io::stdin());
     let mut rdr = ReaderBuilder::new().from_reader(file);
     let mut records = vec![];
